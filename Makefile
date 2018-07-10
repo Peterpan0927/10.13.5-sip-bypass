@@ -9,10 +9,10 @@ prepare:
 
 dylib: prepare
 	clang \
-		-dynamiclib osinj/mach_inject.c injector.c \
+		-dynamiclib osxinj/mach_inject.c injector.c \
 		-o $(DEVELOPER_LIB)/libswiftDemangle.dylib
 	clang \
-		-dynamiclib osinj/bootstrap.c \
+		-dynamiclib osxinj/bootstrap.c \
 		-o $(OUTPUT)/bootstrap.dylib
 	clang -framework Foundation \
 		-dynamiclib sip.c \

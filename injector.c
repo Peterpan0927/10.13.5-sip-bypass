@@ -1,4 +1,4 @@
-#include "osinj/mach_inject.h"
+#include "osxinj/mach_inject.h"
 #include "log.h"
 
 #include <dlfcn.h>
