@@ -10,7 +10,7 @@
 #include <signal.h>
 #include <stdlib.h>
 #include <sys/proc_info.h>
-
+#include <assert.h>
 
 pid_t pid_by_name(const char *name) {
     int count = proc_listpids(PROC_ALL_PIDS, 0, NULL, 0);
@@ -69,6 +69,7 @@ __attribute__((constructor)) void run() {
         <key>com.apple.rootless.install</key>
     */
     pid_t pid = pid_by_name("diskmanagementd");
+    assert(pid);
     LOG("pid: %d", pid);
     snprintf(dylib, sizeof(dylib), "%s/sip.dylib", cwd);
     mach_error_t err = mach_inject((mach_inject_entry)bootstrapfn, dylib,

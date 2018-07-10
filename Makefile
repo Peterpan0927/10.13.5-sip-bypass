@@ -19,12 +19,13 @@ dylib: prepare
 		-o $(OUTPUT)/sip.dylib
 
 loader: prepare
-	clang -framework Foundation fuck.m -o $(OUTPUT)/test
+	clang -framework Foundation exploit.m -o $(OUTPUT)/test
 
 kanye: prepare
 	swiftc -static-stdlib -o $(OUTPUT)/taytay taylor.swift
 
 run: all
+	sudo launchctl start com.apple.diskmanagementd # make sure it's running
 	sudo $(OUTPUT)/test
 
 clean:
