@@ -1,3 +1,3 @@
-#include <stdio.h>
+#import <Foundation/Foundation.h>
 
-#define LOG(fmt, ...) fprintf(stderr, "[xianzhi] " fmt "\n", ##__VA_ARGS__)
+#define LOG(fmt, ...) NSLog(@"[LightYear] " fmt "\n", ##__VA_ARGS__)
