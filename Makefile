@@ -5,6 +5,7 @@ all: dylib loader kanye
 
 prepare:
 	mkdir -p $(OUTPUT)
+	cp symbols $(OUTPUT)/
 	mkdir -p $(DEVELOPER_LIB)
 
 dylib: prepare
