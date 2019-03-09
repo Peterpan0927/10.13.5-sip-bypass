@@ -1,7 +1,5 @@
 # macOS up to 10.13.6 SIP bypass
 
-WriteUp: https://medium.com/0xcc/bypass-macos-rootless-by-sandboxing-5e24cca744be
-
 `make run`
 
 Note that this requires administrative privilege.
