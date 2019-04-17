@@ -1,4 +1,4 @@
-# macOS up to 10.13.6 SIP bypass
+# macOS 10.13.x SIP bypass
 
 `make run`
 
